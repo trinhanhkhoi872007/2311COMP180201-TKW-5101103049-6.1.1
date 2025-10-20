@@ -1,0 +1,43 @@
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;font-family:system-ui,Arial,Helvetica,sans-serif;
+  background:#001528;color:#fff}
+#scene{
+  position:relative;
+  width:100vw;height:65vh;
+  max-height:520px;margin:auto;
+  overflow:hidden;background:linear-gradient(#0a74c4,#012);
+  border:3px solid #044;
+  border-radius:12px}
+.sprite{
+  position:absolute;
+  image-rendering:auto;
+  pointer-events:none}
+  
+#shark{width:220px;top:36vh;left:-230px;animation:shark 12s linear infinite}
+#turtle{width:140px;top:48vh;left:calc(100vw - 10px);animation:turtle 18s linear infinite}
+#diver1{width:120px;left:12vw;top:50vh;transform:scaleX(-1);animation:diver1 3.6s ease-in-out infinite}
+#diver2{width:130px;left:28vw;top:52vh;transform:scaleX(-1);animation:diver2 4.2s ease-in-out infinite}
+#diver3{width:125px;left:44vw;top:51vh;transform:scaleX(-1);animation:diver3 3.9s ease-in-out infinite}
+#fishA{width:240px;top:18vh;left:-260px;animation:fishA 20s linear infinite}
+#fishB{width:220px;top:8vh;left:calc(100vw - 10px);animation:fishB 22s linear infinite}
+
+@keyframes shark{
+  0%{left:-230px;transform:scaleX(1)}
+  50%{left:calc(100vw - 10px);transform:scaleX(1)}
+  51%{transform:scaleX(-1)}
+  100%{left:-230px;transform:scaleX(-1)}
+}
+@keyframes turtle{
+  0%{left:calc(100vw - 10px);transform:scaleX(-1)}
+  50%{left:-150px;transform:scaleX(-1)}
+  51%{transform:scaleX(1)}
+  100%{left:calc(100vw - 10px);transform:scaleX(1)}
+}
+@keyframes diver1{0%{top:54vh}50%{top:30vh}100%{top:54vh}}
+@keyframes diver2{0%{top:56vh}50%{top:34vh}100%{top:56vh}}
+@keyframes diver3{0%{top:55vh}50%{top:33vh}100%{top:55vh}}
+@keyframes fishA{0%{left:-260px}100%{left:calc(100vw + 20px)}}
+@keyframes fishB{0%{left:calc(100vw - 10px);transform:scaleX(-1)}100%{left:-240px;transform:scaleX(-1)}}
+footer{padding:8px 12px;text-align:center;opacity:.75}
